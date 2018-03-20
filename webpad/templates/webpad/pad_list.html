@@ -1,0 +1,15 @@
+{% extends 'webpad/base.html' %}
+
+{% block content %}
+    <div class="container">
+      <div class="pad_list">
+        {% for pad in pads %}
+        <div class="pad_pad">
+          <h2>{{ pad.title }}</h2>
+          <article class="pad_content"> {{ pad.text|linebreaksbr }} </article>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+{% endblock %}

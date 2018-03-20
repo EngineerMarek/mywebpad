@@ -1,0 +1,13 @@
+{% extends 'webpad/base.html' %}
+
+{% block content %}
+<div class="new_pad container">
+    <h1>New pad</h1>
+    <form method="POST" class="pad_form">{% csrf_token %}
+      <div class="form_input">
+        {{ form.as_p }}
+      </div>
+        <button type="submit" class="btn1">Save</button>
+    </form>
+</div>
+{% endblock %}
